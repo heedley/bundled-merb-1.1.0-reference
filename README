@@ -1,3 +1,5 @@
+http://github.com/wycats/bundler
+
 Thanks to the efforts of Pavel (github.com/pk), you can now use Merb with Carl & Yehuda's awesome new gem bundler (github.com/wycats/bundler). If you're working on a merb app, I would highly recommend trying this out and if it works ok, ditching the old thor tasks.
 
 These steps are a work in progress so let us know how it works out for you. I'll try and get some pages up on the Merb wiki soon that has a better step by step tutorial.
