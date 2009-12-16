@@ -1,0 +1,32 @@
+Thanks to the efforts of Pavel (github.com/pk), you can now use Merb with Carl & Yehuda's awesome new gem bundler (github.com/wycats/bundler). If you're working on a merb app, I would highly recommend trying this out and if it works ok, ditching the old thor tasks.
+
+These steps are a work in progress so let us know how it works out for you. I'll try and get some pages up on the Merb wiki soon that has a better step by step tutorial.
+
+First step, install bundler (latest 0.6.0)
+gem install bundler
+
+Install Merb 1.1 from Edge
+git clone git://github.com/wycats/merb.git
+cd merb
+gem install rspec extlib # required for merb's rake install
+
+New Project
+# generate new project using merb 1.1
+merb-gen app bookstore
+cd bookstore
+
+# create bundled app 
+gem bundle
+
+# now you can run the bundled merb console
+bin/merb -i
+
+# you'll want to use bin/rake to use the app's rake tasks with the bundled gems
+bin/rake -T
+
+# you'll probably also want to install mongrel/thin to the bundle
+echo 'gem "mongrel"' >> Gemfile
+gem bundle
+
+# now you can run bin/merb to start the server
+bin/merb

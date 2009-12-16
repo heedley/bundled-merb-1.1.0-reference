@@ -48,4 +48,6 @@ gem "dm-constraints",           dm_gems_version
 
 gem "merb_datamapper",          merb_gems_version
 
+gem "thin"
+
 
